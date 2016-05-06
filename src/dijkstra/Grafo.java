@@ -36,10 +36,11 @@ public class Grafo {
        int aux1 = grafoVertice.ContemVertice(origem);
        int aux2 = grafoVertice.ContemVertice(destino);
        if(aux1 != -1 && aux2 != -1){
-           for(int i = 0; i < grafoVertice.qtdDeVerice(); i ++){
+           for(int i = 0; i < grafoVertice.qtdDeVertice(); i ++){
                if (grafoVertice.getVertice(i).equals(origem)){
                    grafoVertice.inserirVertice(destino, peso);
-                   System.out.println("test");
+                   System.out.println("Inserida aresta entre:" + origem.getNome() + " -> " + destino.getNome());
+                   break;
                }
            
            }
@@ -48,6 +49,11 @@ public class Grafo {
    
    
    }
+   
+   
+   
+   
+
    
    
 

@@ -11,11 +11,19 @@ package dijkstra;
  */
 public class Vertice {
    private Lista verticesVizinhos;
+   private String nome;
 
    
-   Vertice(){
+   Vertice(String nome){
      verticesVizinhos = new Lista(); 
+     this.nome = nome;
    }
+   
+   public String getNome(){
+       return nome;
+   }
+   
+   
    
    
 

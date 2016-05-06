@@ -12,10 +12,14 @@ import java.util.ArrayList;
  * @author dwoloszin
  */
 public class Lista {
-    private ArrayList<Vertice> listaVertice = new ArrayList();
-    private ArrayList listaValor = new ArrayList();
+    private ArrayList<Vertice> listaVertice;
+    private ArrayList listaValor;
+ 
     
-    
+    Lista(){
+    listaVertice = new ArrayList();
+    listaValor = new ArrayList();
+    }
     
     
     public void inserirVertice (Vertice vertice, int peso){
@@ -41,7 +45,7 @@ public class Lista {
         }
      
     public int ContemVertice(Vertice vertice){
-        for(int i = 0; i < qtdDeVerice(); i ++){
+        for(int i = 0; i < qtdDeVertice(); i ++){
             Vertice aux = listaVertice.get(i);
             if (aux.equals(vertice))
                 return i;
@@ -50,7 +54,7 @@ public class Lista {
         return -1;
     }
 
-    public int qtdDeVerice(){
+    public int qtdDeVertice(){
         return listaVertice.size();
     }
     
@@ -68,6 +72,13 @@ public class Lista {
     
     public ArrayList vizinhos(){
         return listaVertice;
+    
+    }
+    
+    public void printLista(){
+        for(int i = 0; i < listaVertice.size(); i++){
+            System.out.print(listaVertice.get(i).getNome());
+        }
     
     }
     
