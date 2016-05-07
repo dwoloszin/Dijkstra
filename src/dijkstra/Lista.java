@@ -77,7 +77,7 @@ public class Lista {
     
     public void printLista(){
         for(int i = 0; i < listaVertice.size(); i++){
-            System.out.print(listaVertice.get(i).getNome());
+            System.out.print(listaVertice.get(i).getNome() + ",");
         }
     
     }

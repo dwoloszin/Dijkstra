@@ -53,6 +53,10 @@ public class Main {
         g1.inserirAresta(v5, v3, 2);
         
         g1.inserirAresta(v6, v7, 2);
+        g1.printGrafo();
+        
+        g1.removerAresta(v5, v7);
+        g1.printGrafo();
         
         
         
