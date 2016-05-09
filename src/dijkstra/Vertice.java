@@ -13,11 +13,16 @@ public class Vertice {
    private Lista verticesVizinhos;
    private String nome;
    private Vertice verticeAntecessorDeMenorCusto;
+   private int valordeMenorcusto;
    
    Vertice(String nome){
      verticesVizinhos = new Lista(); 
      this.nome = nome;
      this.verticeAntecessorDeMenorCusto = null;
+   }
+   
+   public Lista vizinhos(){
+       return verticesVizinhos;
    }
    
    public String getNome(){
@@ -52,7 +57,18 @@ public class Vertice {
        verticesVizinhos.printLista();
    }
    
+public int getPeso(Vertice vertice){
+    if (verticesVizinhos.ContemVertice(vertice) != -1)
+        return verticesVizinhos.getVertice(verticesVizinhos.ContemVertice(vertice)).getPeso(vertice);
+    return -1;
 
+
+}
+
+public int getPesoVizinho (int indice){
+    return verticesVizinhos.getpeso(indice);
+
+}
    
    
    

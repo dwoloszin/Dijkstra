@@ -61,11 +61,10 @@ public class Main {
         
         
         
+        Lista text = v1.vizinhos();
         
         
-        
-        
-        
+        text.printLista();
         
     }
     
